@@ -1,0 +1,43 @@
+<div id="wrapper">
+	<div class="talk" id="line1">
+		<p>
+			店のリストです。
+		</p>
+		<div class="triangle">
+		</div>
+	</div>
+<% @shops.each do |shop| %>
+	<div class="column">
+		<div class="photo">
+		<%= image_tag shop.image.url(:thumb) %>
+		</div>
+		<div class="article">
+			<div class="list shopTitle">
+				<p><%= shop.name %></p>
+			</div>
+			<div class="list shopComment">
+				<p><%= shop.comment %></p>
+			</div>
+		    <div class="order">
+				<% if false %>
+			    <td><%= link_to 'Show', shop %></td>
+			    <% end %>
+				<div class="revision editButton">
+					<td><%= link_to '変更', edit_shop_path(shop) %></td>
+				</div>
+				<div class="revision destroyButton">
+					<td><%= link_to '削除', shop, confirm: '本当に削除しますか?', method: :delete %></td>
+				</div>
+			</div>
+		</div>
+	</div>
+<% end %>
+	</br>
+	</br>
+	<div class="selector enable">
+		<p>戻る</p>
+		<form action="/menu/index">
+		<input type="submit" style="display:none;"/>
+		</form>
+	</div>
+</div>

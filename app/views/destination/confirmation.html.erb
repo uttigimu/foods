@@ -1,0 +1,41 @@
+	<div id="wrapper">
+		<div class="talk" id="line1">
+			<p>
+				決まりました。
+			</p>
+			<div class="triangle">
+			</div>
+		</div>
+		
+		<div class="talk append" id="line2">
+			<p>
+				くどいようですが、
+			</p>
+			<div class="triangle">
+			</div>
+		</div>
+		<div class="talk append" id="line3">
+			<p>
+				何があっても、この店に行きますね？
+			</p>
+			<div class="triangle">
+			</div>
+		</div>
+		<div class="query">
+			<div class="choices enable yes">
+				<p>はい</p>
+				<form action="/shops/<%= @shop.id %>">
+				<input type="submit" style="display:none;"/>
+				</form>
+			</div>
+			<div class="choices enable no">
+				<p>いやだ</p>
+				<form action="/destination/angry2">
+				<input type="submit" style="display:none;"/>
+				</form>
+			</div>
+		</div>
+	</div>
+
+
+

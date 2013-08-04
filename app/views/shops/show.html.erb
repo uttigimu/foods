@@ -1,0 +1,26 @@
+	<div id="wrapper">
+	<p id="notice"><%= notice %></p>
+	
+	<div class="column">
+		<div class="photo">
+		<%= image_tag @shop.image.url(:thumb) %>
+		</div>
+		
+		<div class="article">
+			<div class="list shopTitle">
+				<p><%= @shop.name %></p>
+			</div>
+			<div class="list shopComment">
+				<p><%= @shop.comment %></p>
+			</div>
+		</div>
+	</div>
+	<div class="selector enable">
+		<p>戻る</p>
+		<form action="/menu/index">
+		<input type="submit" style="display:none;"/>
+		</form>
+	</div>
+</div>
+
+

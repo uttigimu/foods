@@ -1,0 +1,50 @@
+<script language="JavaScript">
+<!--
+// 一定時間経過後に指定ページにジャンプする
+mnt = 10; // 何秒後に移動するか？
+url = "http://localhost:3000/destination/choose"; // 移動するアドレス
+function jumpPage() {
+  location.href = url;
+}
+setTimeout("jumpPage()",mnt*1000)
+//-->
+</script>
+
+<div id="wrapper">
+	<div class="talk" id="line1">
+		<p>
+			あんたが行く店は、
+		</p>
+		<div class="triangle">
+		</div>
+	</div>
+	<div class="talk append" id="line2">
+		<p>
+			地獄の三丁目にある、
+		</p>
+		<div class="triangle">
+		</div>
+	</div>
+	<div class="talk append" id="line3">
+		<p>
+			地獄一まずいと評判の
+		</p>
+		<div class="triangle">
+		</div>
+	</div>
+	<div class="talk append angryMax" id="line4">
+		<p>
+			「天使ラーメン」だ！
+		</p>
+		<div class="triangle">
+		</div>
+	</div>
+	
+	<div class="selector enable">
+		<p>黙れ</p>
+		<form action="/destination/choose">
+		<input type="submit" style="display:none;"/>
+		</form>
+	</div>
+
+		

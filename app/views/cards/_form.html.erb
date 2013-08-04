@@ -1,0 +1,28 @@
+<%= form_for(@card) do |f| %>
+  <% if @card.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@card.errors.count, "error") %> prohibited this card from being saved:</h2>
+
+      <ul>
+      <% @card.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+<% end %>
+      </ul>
+    </div>
+  	<% end %>
+	
+	<div class="entryForm">
+		<div class="field">
+	    	店名:
+	    	<%= f.text_field :name %>
+		</div>
+		<div class="field">
+		    写真をアップロードする<br />
+		    <%= f.file_field :image %>
+		</div>
+		
+		
+		<p><%= f.submit '登録する' %></p>
+		
+	</div>
+<% end %>

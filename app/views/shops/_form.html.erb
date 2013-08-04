@@ -1,0 +1,31 @@
+<%= form_for(@shop,:html => { :multipart => true }) do |f| %>
+  <% if @shop.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@shop.errors.count, "error") %> prohibited this shop from being saved:</h2>
+      <ul>
+      <% @shop.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  	<% end %>
+	
+	<div class="entryForm">
+		<div class="field">
+	    	店名:
+	    	<%= f.text_field :name %>
+		</div>
+		<div class="field">
+		    コメント:</br>
+		    <%= f.text_area :comment %>
+		</div>
+		<div class="field">
+		    写真をアップロードする<br />
+		    <%= f.file_field :image %>
+		</div>
+		
+		
+		<p><%= f.submit '登録する' %></p>
+		
+	</div>
+<% end %>

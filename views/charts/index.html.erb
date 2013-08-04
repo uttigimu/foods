@@ -1,0 +1,37 @@
+<div id="container-1">
+	<ul>
+		<li><a href="#fragment-1"><span>春学期</span></a></li>
+		<li><a href="#fragment-2"><span>秋学期</span></a></li>
+		<li><a href="#fragment-3"><span>インターシップ<br />記録・ワークシート</span></a></li>
+	</ul>
+<div id="fragment-1">
+</div>
+
+<div id="fragment-2">
+</div>
+
+<div id="fragment-3">
+	<div class="wrapper">
+		<h1 class="prof">プロフィール</h1>
+		
+		<div class="table">
+			<div class="tableLeftCell">
+			</div>
+			<div class="tableRightCell">
+			</div>
+			<div class="tableRightCell">
+			</div>
+		</div>
+		<div class="prof">
+			<p>写真</p>
+		</div>
+		
+		<div class="inputFrom">
+			<% @charts.each do |chart| %>
+			<%= link_to '書く', edit_chart_path(chart) %>
+			<%= link_to '削除', chart, method: :delete, data: { confirm: '本当に削除しますか？' } %>
+			<% end %>
+			<%= link_to '新しいカルテ', new_chart_path %>
+		</div>
+	</div>
+</div>

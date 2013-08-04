@@ -1,0 +1,27 @@
+<!--<h2>スカカードの登録</h2>
+
+<%= render 'form' %>
+
+<%= link_to '戻る', '/menu/index' %>
+-->
+
+
+
+
+
+<div id="wrapper">
+	<div class="talk" id="line1">
+		<p>
+			スカカードの登録をします。
+		</p>
+		<div class="triangle">
+		</div>
+	</div>
+	<%= render 'form' %>
+	<div class="selector enable">
+		<p>戻る</p>
+		<form action="/menu/index">
+		<input type="submit" style="display:none;"/>
+		</form>
+	</div>
+</div>
